@@ -138,7 +138,7 @@ app.get('*', (req, res, next) => {
   res.sendFile(join(__dirname, 'dist', 'index.html'));
 });
 
-const PORT = 3001;
+const PORT = 1503;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Backend running on http://0.0.0.0:${PORT}`);
 });

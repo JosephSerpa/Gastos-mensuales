@@ -1,0 +1,10 @@
+{
+  "appId": "com.sprintperu.mensual",
+  "appName": "Gastos Mensuales",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "hostname": "mensual.sprintperu.com",
+    "cleartext": true
+  }
+}

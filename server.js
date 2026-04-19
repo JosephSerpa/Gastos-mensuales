@@ -129,7 +129,16 @@ app.delete('/api/history/:id', (req, res) => {
   });
 });
 
+// Serve Static Files (Frontend)
+app.use(express.static(join(__dirname, 'dist')));
+
+// Handle React Routing
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api')) return next();
+  res.sendFile(join(__dirname, 'dist', 'index.html'));
+});
+
 const PORT = 3001;
-app.listen(PORT, () => {
-  console.log(`Backend running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Backend running on http://0.0.0.0:${PORT}`);
 });
